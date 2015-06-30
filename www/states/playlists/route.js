@@ -1,6 +1,6 @@
 angular.module('starter.state.playlists', ['starter.state.playlists.controller'])
 
-.config(function($stateProvider, $urlRouterProvider) {
+.config(function($stateProvider) {
   $stateProvider
 
   .state('app.playlists', {
