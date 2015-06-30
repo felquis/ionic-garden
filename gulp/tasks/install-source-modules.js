@@ -7,14 +7,14 @@ var fs = require('fs');
 var ionicProject = JSON.parse(fs.readFileSync(path.join(appRoot.path, 'ionic.project'), 'utf8'));
 
 gulp.task('install-source-modules', function() {
-  var array = Object.keys(ionicProject.sourceModules)
+  var array = Object.keys(ionicProject.sourceModules);
 
   array.forEach(function (propertyName) {
     console.log(
       'git clone',
       ionicProject.sourceModules[propertyName],
       path.join('modules', propertyName)
-    )
+    );
 
     git.clone(ionicProject.sourceModules[propertyName], {
       cwd: path.join(appRoot.path, 'modules')
